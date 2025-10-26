@@ -19,7 +19,8 @@ const userRoutes = Router();
 userRoutes.post('/create', CreateUser);
 userRoutes.post('/login', LoginUser);
 userRoutes.post('/verify-login', VerifyLoginUser);
-userRoutes.get('/:id?', GetUser);
+userRoutes.get('/', GetUser); // Rota para buscar todos
+userRoutes.get('/:id', GetUser); // Rota para buscar por ID
 userRoutes.put('/:id', UpdateUser);
 userRoutes.delete('/:id', DeleteUser);
 
